@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate LeapYear</title>
+    <style>
+        body{
+            background-color: rgb(208, 248, 248);
+        }
+        .wrapper{
+            height:350px;
+            width:50%;
+            border:2px solid rgb(27, 248, 248);
+            border-radius: 20px;
+            background:linear-gradient( rgba(248, 248, 51 ,0.8),rgba(248, 183, 62,0.8));
+           margin-top:150px;
+           margin-left:330px;
+            text-align: center;
+        }
+        .content{
+            font-size: large;
+            padding:20px;
+        }
+        .content input{
+            height:30px;
+           margin:20px;
+           border: 1px solid rgb(252, 252, 140);
+        }
+        .content input:hover{
+            border-color:gray;
+        }
+        button{
+            padding:8px;
+            border-radius: 10px;
+            border: 1px solid rgb(252, 252, 140);
+           font-size: 15px;
+           font-weight: bold;
+           background-color: white;
+           margin-bottom:40px;
+        }
+        button:hover{
+            background-color:  rgb(252, 252, 140);
+            border-color: gray;
+        }
+        output{
+      
+            font-weight:large;
+            font-size: bold;
+        }
+    </style>
+    <script> 
+        function findLeapYear(){
+            var year=Number(document.getElementById("getData").value);     
+            if(year%4==0&&year%100!=0||year==400){
+            document.getElementById("outputData").value=year + " "  +   "is a  Leap Year";
+            } 
+            else
+            {
+                document.getElementById("outputData").value= year + " "  + "is not a  Leap Year";
+            }                                                  
+        }
+    </script>
+</head>
+<body>
+<div class="wrapper"> 
+    <div class="top">
+        <h1>CALCULATE LEAP-YEAR</h1>
+    </div>
+    <div class="content">
+       <b> Enter Year:</b><br>
+        <input type="text" id="getData" placeholder="Enter Year : " ><br>
+        <button onclick="findLeapYear()">Click Me..</button>
+        <br>
+        <output type="text" id="outputData"></output>
+    </div>
+</div>
+   
+</body>
+</html>
